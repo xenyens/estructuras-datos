@@ -30,6 +30,33 @@ export default class ListaEnlazada{
     insertarEntre(valorInsertado, buscar){
 
     }
+
+    /**
+     * 
+     * @param {*} dato Es el dato a eliminar de la lista enlazada
+     */
+    eliminar(entrada){
+        let temp = this.cabeza;
+        let encontrado = false
+        let actual = temp;
+        let anterior = null;
+        while( (actual !== null) && !encontrado ){
+            encontrado = (actual.data === entrada);
+            if( !encontrado ){
+                anterior = actual;
+                actual = actual.enlace;
+            }
+            if( actual !== null ){
+                if( actual === this.cabeza ){
+                    this.cabeza = actual.enlace;                    
+                } else{
+                    anterior.enlace = actual.enlace;
+                }
+            }
+        }
+        console.log(`Nodo eliminado....`);
+
+    }
     
 
     /**
