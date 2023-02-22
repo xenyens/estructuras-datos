@@ -9,4 +9,11 @@ lista.insertarInicio(5);
 lista.impresion();
 
 lista.eliminar(70);
-lista.impresion()
+lista.impresion();
+
+lista.insertarEntre(200,1);
+lista.impresion();
+
+lista.insertarInicio(500);
+lista.insertarInicio(600);
+lista.insertarInicio(700);
